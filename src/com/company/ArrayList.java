@@ -22,6 +22,7 @@ public class ArrayList {
         for (int j : array) {
             add(j);
         }
+        filledSize = filledSize + array.length;
     }
 
     public void add(int index, int element) {
