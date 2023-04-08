@@ -22,6 +22,13 @@ public class Main {
         System.out.println(arrayList.getElement(2));
         System.out.println(arrayList.getIndex(30));
 
+        //Testing subList method
+
+        int[] ints = arrayList.subList(2, 4);// 100,1000,2
+        for (int i = 0; i < ints.length; i++) {
+            System.out.println(ints[i]);
+        }
+
         //Testing remove methods
         arrayList.removeElementOfIndex(1);
         arrayList.removeElement(30);
