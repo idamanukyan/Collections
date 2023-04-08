@@ -22,7 +22,6 @@ public class ArrayList {
         for (int j : array) {
             add(j);
         }
-        filledSize = filledSize + array.length;
     }
 
     public void add(int index, int element) {
@@ -58,7 +57,7 @@ public class ArrayList {
         for (int i = 0; i < initialArray.length; i++) {
             if (initialArray[i] == element) {
                 removeElementOfIndex(i);
-                filledSize--;
+                return;
             }
         }
         System.out.println("The element does not exist.");
@@ -102,7 +101,7 @@ public class ArrayList {
 
     public void print() {
         for (int i = 0; i < filledSize; i++) {
-            System.out.println(initialArray[i]);
+            System.out.print(initialArray[i] + " ");
         }
     }
 }
