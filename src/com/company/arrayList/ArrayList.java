@@ -1,6 +1,6 @@
-package com.company;
+package com.company.arrayList;
 
-public class ArrayList {
+public class ArrayList{
 
     int[] initialArray = new int[8];
     int filledSize = 0;

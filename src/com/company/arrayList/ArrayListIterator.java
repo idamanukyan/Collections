@@ -1,14 +1,14 @@
-package com.company;
+package com.company.arrayList;
 
 import java.util.NoSuchElementException;
 
-public class Iterator<T> {
+public class ArrayListIterator<T> {
 
     private T[] array;
     private int index;
     private boolean canRemove;
 
-    public Iterator(T[] array) {
+    public ArrayListIterator(T[] array) {
         this.array = array;
         this.index = 0;
         this.canRemove = false;
