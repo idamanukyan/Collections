@@ -1,15 +1,17 @@
 package com.company.queue;
 
+import java.util.Deque;
+
 public class Queue {
 
-    private int front;
+    private int first;
     private int last;
     private int[] queueArray;
     private int size;
 
     public Queue() {
         this.size = 0;
-        this.front = 0;
+        this.first = 0;
         this.last = -1;
         this.queueArray = new int[10];
     }
@@ -29,10 +31,10 @@ public class Queue {
         queueArray[last] = element;
     }
 
-    public void remove(int element) {
+    public void remove() {
         if (!isEmpty()) {
-            int item = queueArray[front];
-            front = (front + 1) % size;
+            int item = queueArray[first];
+            first = (first + 1) % size;
         }
     }
 
@@ -44,17 +46,17 @@ public class Queue {
         if (isEmpty()) {
             return -1;
         }
-        return queueArray[front];
+        return queueArray[first];
     }
 
     public int size() {
         if (isEmpty()) {
             return 0;
         }
-        if (last >= front) {
-            return last - front + 1;
+        if (last >= first) {
+            return last - first + 1;
         } else {
-            return size - front + last + 1;
+            return size - first + last + 1;
         }
     }
 

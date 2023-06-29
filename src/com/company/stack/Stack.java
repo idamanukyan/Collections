@@ -26,7 +26,7 @@ public class Stack {
         size++;
     }
 
-    public int pop() {
+    public int x() {
         if (isEmpty()) {
             return -1;
         }
@@ -59,9 +59,6 @@ public class Stack {
         return stack[index];
     }
 
-    public int[] getStack() {
-        return stack;
-    }
 
     public boolean isEmpty() {
         return size == 0;
